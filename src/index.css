@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-cream overflow-x-hidden;
+    cursor: none; /* Hide default cursor */
+  }
+  
+  /* Kill switch class to bring back cursor */
+  body.dev-mode {
+    cursor: default;
+  }
+}
